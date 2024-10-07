@@ -1,20 +1,15 @@
+#!/usr/bin/python3
 def pascal_triangle(n):
     if n <= 0:
         return []
 
-    # Initialize Pascal's Triangle with the first row
-    triangle = [[1]]
+    triangle = [[1]]  # First row of Pascal's Triangle
     
     for i in range(1, n):
-        # Start each row with a '1'
-        row = [1]
-        
-        # Calculate the values in the middle of the row
+        row = [1]  # Start each row with 1
         for j in range(1, i):
-            row.append(triangle[i-1][j-1] + triangle[i-1][j])
-        
-        # End each row with a '1'
-        row.append(1)
+            row.append(triangle[i - 1][j - 1] + triangle[i - 1][j])  # Summing previous row values
+        row.append(1)  # End each row with 1
         triangle.append(row)
     
     return triangle
