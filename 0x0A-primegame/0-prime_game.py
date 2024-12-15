@@ -1,4 +1,25 @@
 #!/usr/bin/python3
+"""
+Prime Game Module
+
+This module implements the core logic for a competitive game involving prime numbers. 
+It includes functions to determine prime numbers, calculate cumulative prime counts, 
+and evaluate the winner of the game across multiple rounds.
+
+Key Features:
+    - Prime number generation using the Sieve of Eratosthenes.
+    - Fast computation of cumulative prime counts.
+    - Game logic for determining the winner based on optimal play strategies.
+
+Functions:
+    - sieve_of_eratosthenes(max_n): Generate prime numbers up to max_n.
+    - calculate_prime_counts(is_prime): Compute cumulative prime counts.
+    - isWinner(x, nums): Determine the game winner.
+
+Example:
+    >>> isWinner(3, [4, 5, 1])
+    'Ben'
+"""
 
 def sieve_of_eratosthenes(max_n):
     """
